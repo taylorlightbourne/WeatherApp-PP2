@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="weatherExcercise.css">
 </head>
 <body>
-  <div class="app-wrap">
-    <header>
-      <input type="text" autocomplete="off" class="search-box" placeholder="Ex. 30265">
+  <div class="container">
+    <header class="header">
+      <input type="text" autocomplete="off" class="search-box" placeholder="Ex. 30265"></input>
     </header>
-    <main>
+    <main class="main">
       <section class="location">
         <div class="city">Enter a City</div>
         <div class="date"></div>
@@ -22,6 +22,12 @@
         <div class="weather"></div>
         <div class="hi-low"></div>
       </div>
+      <div class="toggle">
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    </div>
     </main>
   </div>
   <script src="weatherExcercise.js"></script>

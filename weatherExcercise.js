@@ -11,8 +11,7 @@ const api = {
       getResults(searchbox.value);
     }
   }
-  // api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
-  https://api.openweathermap.org/data/2.5/weather?zip=${inputValue.value},us&appid=${API}
+
   function getResults (query) {
     fetch(`${api.base}weather?zip=${query}&appid=${api.key}`)
       .then(weather => {
@@ -52,3 +51,36 @@ const api = {
     let year = d.getFullYear();
   
     return `${day} ${date} ${month} ${year}`;}
+
+    // toggle
+    function setTheme(themeName) {
+      localStorage.setItem('theme', themeName);
+      document.documentElement.className = themeName;
+  }
+  
+  function toggleTheme() {
+      if (localStorage.getItem('theme') === 'theme-light') {
+          setTheme('theme-dark');
+      } else {
+          setTheme('theme-light');
+      }
+  }
+  
+  function toggleTheme() {
+      if (localStorage.getItem('theme') === 'theme-dark') {
+          setTheme('theme-light');
+      } else {
+          setTheme('theme-dark');
+      }
+  }
+  
+  (function () {
+      if (localStorage.getItem('theme') === 'theme-dark') {
+          setTheme('theme-dark');
+          document.getElementById('slider').checked = false;
+      } else {
+          setTheme('theme-light');
+        document.getElementById('slider').checked = true;
+      }
+  })();
+  
