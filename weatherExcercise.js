@@ -11,14 +11,19 @@ const api = {
       getResults(searchbox.value);
     }
   }
-  
+  // api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}
+  https://api.openweathermap.org/data/2.5/weather?zip=${inputValue.value},us&appid=${API}
   function getResults (query) {
-    fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+    fetch(`${api.base}weather?zip=${query}&appid=${api.key}`)
       .then(weather => {
         return weather.json();
       }).then(displayResults);
   }
-  
+  const tempConvert = (kelvin) => {
+    const fahrenheit = Math.round(((kelvin-273.15)*1.8)+32);
+    return fahrenheit;
+  };
+
   function displayResults (weather) {
     let city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
@@ -28,13 +33,13 @@ const api = {
     date.innerText = dateBuilder(now);
   
     let temp = document.querySelector('.current .temp');
-    temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+    temp.innerHTML = `${tempConvert(weather.main.temp)}<span>°F</span>`;
   
     let weather_el = document.querySelector('.current .weather');
     weather_el.innerText = weather.weather[0].main;
   
     let hilow = document.querySelector('.hi-low');
-    hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+    hilow.innerText = `Low: ${tempConvert(weather.main.temp_min)}°F / High: ${tempConvert(weather.main.temp_max)}°F`;
   }
   
   function dateBuilder (d) {
