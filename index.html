@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="weatherExcercise.css">
 </head>
 <body>
@@ -14,14 +16,18 @@
     </header>
     <main class="main">
       <section class="location">
-        <div class="city">Enter a City</div>
+        <div class="city"></div>
         <div class="date"></div>
       </section>
-      <div class="current">
-        <div class="temp"><span></span></div>
-        <div class="weather"></div>
-        <div class="hi-low"></div>
-      </div>
+      <section class="output">
+        <img class="image">
+        <div class="current">
+          <div class="temp"><span>          
+            <img src="header.png" height="150px" width="250px"></span></div>
+          <div class="weather"></div>
+          <div class="hi-low"></div>
+        </div>
+      </section>
       <div class="toggle">
         <label id="switch" class="switch">
             <input type="checkbox" onchange="toggleTheme()" id="slider">

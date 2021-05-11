@@ -23,6 +23,7 @@ const api = {
     return fahrenheit;
   };
 
+
   function displayResults (weather) {
     let city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
@@ -83,4 +84,3 @@ const api = {
         document.getElementById('slider').checked = true;
       }
   })();
-  
