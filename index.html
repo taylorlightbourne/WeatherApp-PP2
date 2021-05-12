@@ -12,7 +12,8 @@
 <body>
   <div class="container">
     <header class="header">
-      <input type="text" autocomplete="off" class="input" placeholder="Ex. 30265"></input>
+      <input type="text" autocomplete="off" class="input" placeholder="Ex. 30265" onfocus="this.placeholder = ''"
+      onblur="this.placeholder = 'enter your text'" /></input>
     </header>
     <main class="main">
       <section class="location">
@@ -20,7 +21,7 @@
         <div class="date"></div>
       </section>
       <section class="output">
-        <img class="image">
+        <img id="image">
         <div class="current">
           <div class="temp"><span>          
             <img src="header.png" height="150px" width="250px"></span></div>
