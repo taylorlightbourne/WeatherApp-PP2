@@ -10,7 +10,8 @@ API provided by: https://openweathermap.org/api </p>
 
 ![image](https://user-images.githubusercontent.com/79942688/118004018-14d42800-b317-11eb-84d1-acc6932ba7fc.png)
 
-<h2><a href="https://www.figma.com/community/file/974352831498882628/Weather-App">Product Design Diagrams</a></h2>
+<h2>Product Design Diagrams</h2>
+<h4>Figma Link: https://www.figma.com/community/file/974352831498882628/Weather-App</h4>
 <h4>User Flow:</h4>
 
 ![image](https://user-images.githubusercontent.com/79942688/118004194-3f25e580-b317-11eb-9ab3-cf04e7453179.png)
