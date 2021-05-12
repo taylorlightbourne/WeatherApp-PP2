@@ -42,8 +42,10 @@ const api = {
   
     let hilow = document.querySelector('.hi-low');
     hilow.innerText = `Low: ${tempConvert(weather.main.temp_min)}°F / High: ${tempConvert(weather.main.temp_max)}°F`;
+
   }
   
+
   //ADD CURRENT DATE
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
