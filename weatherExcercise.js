@@ -44,7 +44,7 @@ function displayResults (weather) {
   weather_el.innerText = weather.weather[0].main;
   hilow.innerText = `Low: ${tempConvert(weather.main.temp_min)}°F / High: ${tempConvert(weather.main.temp_max)}°F`;
   weather.iconId = weather.weather[0].icon;
-  iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
+  iconElement.innerHTML = `<img src="icons/${weather.iconId}.png" width="200px"/> `;
 }
 
 
