@@ -13,25 +13,55 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   header input {
-    width: 100%;
-    max-width: 280px;
+    width: 280px;
+    height: 30px;
     padding: 10px 15px;
-    border: none;
-    outline: none;
-    background-color: white;
-    font-family: 'Antonio', sans-serif;
+    left: 80px;
+    top: 164px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+    background: #F5F5FA;
+    color: #7878AB;
+    font-weight: bold;
+    outline: white;
+    border: white;
     color: black;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 300; 
+    text-align: center;
     transition: 0.2s ease-out;
   }
-  
+  header input:hover {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
+  }
   header input:focus {
     background-color: rgba(255, 255, 255, 0.6);
   }
-  
+  .button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    left: 80px;
+    top: 164px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(170, 170, 204, 0.25), 5px 5px 10px rgba(170, 170, 204, 0.5), -5px -5px 10px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+    background: #F5F5FA;
+    color: #7878AB;
+    font-weight: bold;
+    outline: white;
+    border: white;
+  }
+  button:hover {
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px rgba(170, 170, 204, 0.5);
+  }
   .location {
     display: flex;
     width:100%;

@@ -1,0 +1,34 @@
+/* Button */
+
+position: absolute;
+width: 216px;
+height: 64px;
+left: 80px;
+top: 164px;
+
+background: #F5F5FA;
+/* Shadow 3 */
+box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px #FFFFFF;
+border-radius: 32px;
+
+
+/* Button */
+
+position: absolute;
+height: 40px;
+left: 32px;
+right: 32px;
+top: calc(50% - 40px/2);
+
+font-family: SF Pro Rounded;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 40px;
+/* identical to box height, or 111% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #7878AB;
+

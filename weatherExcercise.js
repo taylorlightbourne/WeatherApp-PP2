@@ -2,28 +2,30 @@ const api = {
     key: "ac813b93c33296e12a37202012c9b25d",
     base: "https://api.openweathermap.org/data/2.5/"
   }
-  
-  const searchbox = document.querySelector('.search-box');
+
+  const searchbox = document.querySelector('.input');
   searchbox.addEventListener('keypress', setQuery);
-  
+
   function setQuery(evt) {
     if (evt.keyCode == 13) {
       getResults(searchbox.value);
     }
   }
 
+//FETCH API
   function getResults (query) {
     fetch(`${api.base}weather?zip=${query}&appid=${api.key}`)
       .then(weather => {
         return weather.json();
       }).then(displayResults);
   }
+  //CONVERT TEMPERATURE
   const tempConvert = (kelvin) => {
     const fahrenheit = Math.round(((kelvin-273.15)*1.8)+32);
     return fahrenheit;
   };
 
-
+// DISPLAY WEATHER CONTENTS
   function displayResults (weather) {
     let city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
@@ -42,6 +44,7 @@ const api = {
     hilow.innerText = `Low: ${tempConvert(weather.main.temp_min)}°F / High: ${tempConvert(weather.main.temp_max)}°F`;
   }
   
+  //ADD CURRENT DATE
   function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -52,8 +55,8 @@ const api = {
     let year = d.getFullYear();
   
     return `${day} ${date} ${month} ${year}`;}
-
-    // toggle
+  
+    //COLOR THEME SWITCH 
     function setTheme(themeName) {
       localStorage.setItem('theme', themeName);
       document.documentElement.className = themeName;
