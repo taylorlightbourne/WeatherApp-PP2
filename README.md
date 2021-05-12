@@ -1,9 +1,8 @@
 # WeatherApp-PP3
-Light Mode: 
+User Flow:
 
-![image](https://user-images.githubusercontent.com/79942688/117902659-f5e48000-b29b-11eb-8588-5c1a165f002c.png)
+![image](https://user-images.githubusercontent.com/79942688/118003186-59ab8f00-b316-11eb-8752-403b1325e8de.png)
 
-Dark Mode:
+Screenshot of App
 
-![image](https://user-images.githubusercontent.com/79942688/117902620-df3e2900-b29b-11eb-8a72-42b68a558bcf.png)
-
+![image](https://user-images.githubusercontent.com/79942688/118003454-99727680-b316-11eb-873e-99cb620d3bed.png)
