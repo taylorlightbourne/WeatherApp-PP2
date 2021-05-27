@@ -1,5 +1,5 @@
 <h1>Weather App</h1>
-<h3>Deploy Link: https://taylorlightbourne.github.io/WeatherApp-PP2/ </h3>
+<h3>Deploy Link: https://taylorlightbourne.github.io/weather-app/ </h3>
 <p>This weather app was developed using HTML, CSS, and JavaScript. <br>
 This app captures a zip code from the user and provides them with the current weather for that location. <br>
 The icon also changes to represent the weather condition for the respected zip code. <br>
